@@ -1,9 +1,25 @@
-import React, { Component } from 'react';
+import React, { PropTypes, Component } from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as appActions from './actions/appActions';
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  PropTypes = {
+    actions: PropTypes.object.isRequired,
+    app: PropTypes.object.isRequired
+  }
+
+  componentDidMount(){
+    this.props.actions.initialize(true)
+  }
+
   render() {
+
+    console.log("PROPS>>>", this.props)
+
     return (
       <div className="App">
         <div className="App-header">
@@ -11,11 +27,22 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
         <p className="App-intro">
-          To get camila started, edit <code>src/App.js</code> and save to reload.
+          To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    'app' : state.app
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+ return { actions: bindActionCreators(appActions, dispatch)}
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

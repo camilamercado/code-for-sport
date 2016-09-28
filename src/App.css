@@ -1,5 +1,11 @@
+body {
+  background: black;
+}
+
 .App {
   text-align: center;
+  font-family: "andale mono";
+  text-transform: uppercase;
 }
 
 .App-logo {
@@ -9,13 +15,23 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
-  padding: 20px;
+  height: 500px;
+  width: 500px;
   color: white;
+  position: absolute;
+  left: -250px;
+  transform:translateY(-50%) rotate(-45deg);
+  margin-left: 50%;
+  top: 50vh;
 }
 
 .App-intro {
   font-size: large;
+}
+
+a {
+  color: yellow;
+  text-decoration: none;
 }
 
 @keyframes App-logo-spin {

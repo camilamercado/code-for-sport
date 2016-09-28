@@ -23,12 +23,13 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>Software Studios Boilerplate</h2>
+          <h3>React / Redux / Heroku</h3>
+          <h3>cloned from @mars</h3> 
+          <a href="https://github.com/mars/create-react-app-buildpack#usage">
+          create-react-app-buildpack</a>
+
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
       </div>
     );
   }

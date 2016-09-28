@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "classnames": "^2.2.5",
     "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
     "react-scripts": "0.6.1",
     "redux": "^3.6.0"
   },

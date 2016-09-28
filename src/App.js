@@ -27,8 +27,11 @@ class App extends Component {
           <h2>Software Studios Boilerplate</h2>
           <h3>React / Redux / React-Router / Heroku</h3>
           <h3>cloned from @mars</h3> 
-          <a href="https://github.com/mars/create-react-app-buildpack#usage">
-          create-react-app-buildpack</a>
+           <ul>
+            <li><a href="https://github.com/mars/create-react-app-buildpack#usage">
+            create-react-app-buildpack</a></li>
+            <li><a href="https://github.com/camilamercado/Software_BoilerPlate">Link to Repo</a></li>
+          </ul>
           <div className="link"><Link to={'/sub'}>LINK TO SUB_PAGE</Link></div>
         </div>
        

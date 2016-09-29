@@ -34,7 +34,7 @@ class App extends Component {
           </ul>
           <div className="link"><Link to={'/sub'}>LINK TO SUB_PAGE</Link></div>
         </div>
-       
+        ß
       </div>
     );
   }

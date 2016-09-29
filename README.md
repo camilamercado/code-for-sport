@@ -1,4 +1,5 @@
 Software Studios Boilerplate
+------------------------------
 React / Redux / React-Router / Heroku
 
 Project cloned from @Mars [Create React App](https://github.com/mars/create-react-app-buildpack)

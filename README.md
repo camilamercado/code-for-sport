@@ -1,4 +1,4 @@
-CODE FOR SPORT
+Software Studios Boilerplate
 ------------------------------
 React / Redux / React-Router / Heroku
 

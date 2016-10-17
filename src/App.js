@@ -3,7 +3,8 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as appActions from './actions/appActions';
 import {Link} from 'react-router'
-
+import data from './database/sporting-heroes.js'
+import Scroller from './components/Scroller'
 import './App.css';
 
 class App extends Component {
@@ -15,26 +16,29 @@ class App extends Component {
 
   componentDidMount(){
     this.props.actions.initialize(true)
+    //this.props.actions.setGSheetData()
+    this.loadInitialPosts()
   }
+
+  loadInitialPosts () {
+    this.props.actions.postData(data.dataObj)
+  }
+
+ 
 
   render() {
 
-    console.log("PROPS>>>", this.props)
+    //console.log("PROPS>>>", this.props)
 
     return (
       <div className="App">
-        <div className="App-header">
-          <h2>Software Studios Boilerplate</h2>
-          <h3>React / Redux / React-Router / Heroku</h3>
-          <h3>cloned from @mars</h3> 
-           <ul>
-            <li><a href="https://github.com/mars/create-react-app-buildpack#usage">
-            create-react-app-buildpack</a></li>
-            <li><a href="https://github.com/camilamercado/Software_BoilerPlate">Link to Repo</a></li>
-          </ul>
-          <div className="link"><Link to={'/sub'}>LINK TO SUB_PAGE</Link></div>
-        </div>
-        ß
+        <Scroller 
+          app={this.props.app}
+          actions={this.props.actions}
+          history={this.props.history}
+          routeParams={this.props.routeParams}
+          />
+        
       </div>
     );
   }

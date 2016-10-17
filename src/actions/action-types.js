@@ -1,1 +1,5 @@
 export const INITIALIZE = 'INITIALIZE';
+export const SETDATA = 'SETGDATA';
+export const SETACTIVEPOST = 'SETACTIVEPOST';
+export const SETCURRENTPOST = 'SETCURRENTPOST';
+export const SETPAGETYPE = 'SETPAGETYPE';

@@ -1,0 +1,218 @@
+.Example {
+	background: white;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100vh;
+	
+}
+
+.Viewport {
+	top: 100px;
+	color: grey;
+	height: 800px;
+	width: 700px;
+	background: lightgrey;
+	text-align: right;
+	margin-left: 50%;
+	left: -350px;
+	position: absolute;
+	
+}
+
+.title {
+	position: absolute;
+	top: 40px;
+	right: 50px;
+}
+
+.isometric {
+	height: 700px;
+	width: 700px;
+	
+	-ms-transform: skew(20deg, 10deg); 
+    -webkit-transform: skew(20deg, 10deg); 
+    transform: skew(0deg, -20deg);
+}
+
+.x {
+	border: 10px solid yellow;
+	height: 25%;
+	width: 50%;
+	position: absolute;
+	left: 15%;
+	top: 20%;
+	-webkit-transition: all 2s ease;
+	-moz-transition:    all 2s ease;
+	-opera-transition:  all 2s ease;
+}
+
+.x:hover {
+	top: 30%;
+	left: 25%;
+	opacity: 1!important;
+}
+
+.cover {
+	width: 40%;
+	height: 100%;
+	position: absolute;
+	background-image: url('../images/example/cover.png');
+	background-size: 100% auto;
+}
+
+#X2 {
+	
+	background-image: url('../images/example/page/2.png');
+	
+}
+
+#X3 {
+	
+	background-image: url('../images/example/page/3.png');
+	
+}
+
+#X4 {
+	
+	background-image: url('../images/example/page/4.png');
+	
+}
+
+#X1 {
+	
+	background-image: url('../images/example/page/1.png');
+	
+}
+
+.page {
+	width: 60%;
+	height: 92%;
+	left: 40%;
+	margin-top: 4%;
+	position: absolute;
+	opacity: 0.6;
+	background-size: 100% 100%;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition:    all 0.5s ease;
+	-opera-transition:  all 0.5s ease;
+}
+
+.feed {
+	width: 15%;
+	height: 80%;
+	position: absolute;
+	left: 20%;
+	top: 22%;
+	-webkit-transition: all 2s ease;
+	-moz-transition:    all 2s ease;
+	-opera-transition:  all 2s ease;
+	z-index: -2;
+}
+
+.feed:hover{
+	top: -35%;
+}
+
+.card {
+	height: 25%;
+	width: 100%;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition:    all 0.5s ease;
+	-opera-transition:  all 0.5s ease;
+}
+
+.feed #a {
+	background-image: url('../images/example/feed/1.jpg');
+	background-size: 100% auto;
+}
+
+.feed #b {
+	background-image: url('../images/example/feed/2.jpg');
+	background-size: 100% auto;
+	opacity: 1;
+}
+
+.feed #c {
+	background-image: url('../images/example/feed/3.jpg');
+	background-size: 100% auto;
+}
+.feed #d {
+	background-image: url('../images/example/feed/4.jpg');
+	background-size: 100% auto;
+}
+
+.xGuide {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	height: 1%;
+	border-bottom: 1px solid grey;
+	opacity:0.5;
+}
+
+.leftArrow {
+	width: 10%;
+	height: 150%;
+	top: 30%;
+	left: 60%;
+	position: absolute;
+	background-image: url('../images/example/arrow/LA.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.yGuide {
+	position: absolute;
+	left: 13%;
+	width: 1%;
+	top: -13.4%;
+	height: 114%;
+	border-left: 1px solid grey;
+	opacity:0.5;
+
+}
+
+.downArrow {
+	width: 150%;
+	height: 10%;
+	top: 65%;
+	left: -95%;
+	position: absolute;
+	background-image: url('../images/example/arrow/DA.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+
+
+.cover span {
+	color: blue;
+	font-size: 90px;
+	font-weight: bold;
+	position: absolute;
+	right: 0px;
+	top: -15%;
+	z-index: -1;
+}
+
+.Example .Projects {
+	left: -15%;
+	top: -25%;
+	text-align: right;
+	-webkit-transform: scale(0.2);
+	-moz-transform: scale(0.2);
+	-ms-transform: scale(0.2);
+	-o-transform: scale(0.2);
+}
+
+.Example .Projects .Cover {
+	overflow: hidden;
+}
+
+.Example .Projects .Page {
+	text-align: left;
+}
+
+

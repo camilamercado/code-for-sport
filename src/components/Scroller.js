@@ -12,10 +12,10 @@ class Scroller extends Component {
       return
     }
     if (this.props.app.activePost.id !== nextProps.app.activePost.id) {
-     this.props.history.pushState(null, "/"+nextProps.app.activePost.id+"/"+ nextProps.app.pageType)
+     this.props.history.pushState(null, "/App/"+nextProps.app.activePost.id+"/"+ nextProps.app.pageType)
     }
     if(this.props.app.pageType !== nextProps.app.pageType){
-      this.props.history.pushState(null, "/"+ nextProps.app.activePost.id +"/"+ nextProps.app.pageType)
+      this.props.history.pushState(null, "/App/"+ nextProps.app.activePost.id +"/"+ nextProps.app.pageType)
     }
   }
 

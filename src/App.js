@@ -5,6 +5,8 @@ import * as appActions from './actions/appActions';
 import {Link} from 'react-router'
 import data from './database/sporting-heroes.js'
 import Scroller from './components/Scroller'
+import Example from './components/Example'
+
 import './App.css';
 
 class App extends Component {
@@ -24,20 +26,35 @@ class App extends Component {
     this.props.actions.postData(data.dataObj)
   }
 
+  startRequest(){
+    if (this.props.route.path === "/Example") {
+      <Example 
+          app={this.props.app}
+          actions={this.props.actions}
+          history={this.props.history}
+          routeParams={this.props.routeParams}
+          />
+
+    }
+
+  }
+
  
 
   render() {
 
-    //console.log("PROPS>>>", this.props)
+    console.log("PROPS>>>", this.props.route.path)
 
     return (
       <div className="App">
+      {this.startRequest()}
         <Scroller 
           app={this.props.app}
           actions={this.props.actions}
           history={this.props.history}
           routeParams={this.props.routeParams}
           />
+      }
         
       </div>
     );

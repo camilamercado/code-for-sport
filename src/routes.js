@@ -5,6 +5,7 @@ import Example from './components/Example';
 
 const Routes = (props) => (
 <Router history={browserHistory}>
+	<Route path="/" component={App}/>
 	<Route path="/App" component={App}/>
 	 <Route path="/App/:currentpost" component={App}/>
 	 <Route path="/App/:currentpost/:pagenumber" component={App}/>

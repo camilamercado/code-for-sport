@@ -1,0 +1,35 @@
+{
+  "title": "",
+  "meta":[
+    {
+      "name": "description",
+      "content": ""
+    },
+    {
+      "name": "viewport",
+      "content": "width=device-width, initial-scale=1"
+    }
+  ],
+  "link": [
+    {
+      "rel": "shortcut icon",
+      "href": "/favicon.ico",
+      "type": "image/x-icon"
+    },
+    {
+      "rel": "icon",
+      "href": "/favicon.ico",
+      "type": "image/x-icon"
+    },
+    {
+      "rel": "stylesheet",
+      "href": "//fonts.googleapis.com/css?family=Arimo:400,700",
+      "type": "text/css"
+    },
+    {
+      "rel": "stylesheet",
+      "href": "//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700",
+      "type": "text/css"
+    }
+  ]
+}

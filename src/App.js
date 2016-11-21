@@ -26,20 +26,6 @@ class App extends Component {
     this.props.actions.postData(data.dataObj)
   }
 
-  startRequest(){
-    if (this.props.route.path === "/Example") {
-      <Example 
-          app={this.props.app}
-          actions={this.props.actions}
-          history={this.props.history}
-          routeParams={this.props.routeParams}
-          />
-
-    }
-
-  }
-
- 
 
   render() {
 
@@ -47,7 +33,6 @@ class App extends Component {
 
     return (
       <div className="App">
-      {this.startRequest()}
         <Scroller 
           app={this.props.app}
           actions={this.props.actions}

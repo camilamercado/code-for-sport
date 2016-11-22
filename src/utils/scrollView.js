@@ -14,14 +14,14 @@ const makeInviewComponent = (Component) => {
 
       componentDidMount() {
         this._isMounted = true
-        window.addEventListener('scroll', () => this.register())
+        window.addEventListener('scroll', () => this.monitor())
 
-        this.unregister = this.register()
+        this.unmonitor = this.monitor()
       },
 
       componentWillUnmount() {
         this._isMounted = false;
-        this.unregister()
+        this.unmonitor()
       },
 
       viewHeight() {
@@ -31,7 +31,7 @@ const makeInviewComponent = (Component) => {
 		    document.getElementsByTagName('body')[0].clientHeight
 		},
 
-      register(){
+      monitor(){
 
         const element = findDOMNode(this)
         const win = this.viewHeight()

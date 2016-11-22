@@ -1,59 +1,56 @@
 CODE-FOR-SPORT
 ------------------------------
-React / Redux / React-Router / Heroku
+React-Create-App / Redux / Dynamic Scroller
 
-Project cloned from @Mars [Create React App](https://github.com/mars/create-react-app-buildpack)
+![alt tag](https://github.com/camilamercado/code-for-sport/blob/master/src/images/example/scroll.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+Scrolling experiment using an autonomous react component to register, and pass scroll positions of chosen components as props.
 
-Find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-ap/blob/master/packages/react-scripts/template/README.md).
+```javascript 
+const makeInviewComponent = (Component) => {
+  return (
+    React.createClass({
+      displayName: 'scrollView',
 
-Usage
------
-
-### Generate a React app
-
-```bash
-git clone https://github.com/camilamercado/Software_BoilerPlate my-app-name
-cd my-app-name
+      getInitialState() {
+        return {
+          inView: false,
+        };
+      },
 ```
 
-### Make it a git repo
 
-```bash
-git init
-```
+Generates content based on which chosen element is "inView" of the window. This example is programmed to observe a "feed" of images, relatively positioned vertically down the window. Each image is slightly larger than the height of the viewport. The scrollView util monitors each image upon a scrollEvent, and provides it with a pop declaring wether or not it is in view. The parameters which declare what is "in view" are determinable by the developer. In this example it is determined by occupying more than 50% of the viewport. 
 
-At this point, this new repo is local, only on your computer. Eventually, you may want to [push to Github](#push-to-github).
+Depending on which image in the feed is inview, a redux action is called to generate a "post" based on the ID# of the inview image. 
+This allows the changing of whichever image is inview to affect the data being represented accross multiple autonomous components.
 
-### Create the Heroku app
+```javascript
 
-```bash
-heroku create my-app-name --buildpack https://github.com/mars/create-react-app-buildpack.git
-```
+ monitor(){
 
-✏️ *Replace `my-app-name` with a name for your unique app.*
+        const element = findDOMNode(this)
+        const win = this.viewHeight()
+      	const {top, bottom} = element.getBoundingClientRect()
+  		  let height = element.offsetHeight
+        let position = (top + bottom)
 
-This command:
+        if (position >= (height / 2) && position <= (height * 2)){
+          this.update(true)
+        } else {
+          this.update(false)
+        }
 
-* sets the [app name](https://devcenter.heroku.com/articles/creating-apps#creating-a-named-app) & its URL `https://my-app-name.herokuapp.com`
-* sets the [buildpack](https://devcenter.heroku.com/articles/buildpacks) to deploy a `create-react-app` app
-* configures the [`heroku` remote](https://devcenter.heroku.com/articles/git#creating-a-heroku-remote) in the local git repo, so `git push heroku master` will push to this new Heroku app.
+      },
 
-### Commit & deploy ♻️
+      update(bool) {
+        if (!this._isMounted) return;
 
-```bash
-git add .
-git commit -m "react-create-app on Heroku"
-git push heroku master
-```
-
-### Visit the app's public URL in your browser
-
-```bash
-heroku open
-```
-
-### Visit the Heroku Dashboard for the app
-
-Find the app on [your dashboard](https://dashboard.heroku.com).
+        this.setState({
+          inView: bool,
+        });
+      },
+      
+  ```
+for a working diagram reference http://iso-code.herokuapp.com/
+![alt tag](https://github.com/camilamercado/code-for-sport/blob/master/src/images/example/diagram.png)

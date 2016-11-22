@@ -54,3 +54,6 @@ This allows the changing of whichever image is inview to affect the data being r
   ```
 for a working diagram reference http://iso-code.herokuapp.com/
 ![alt tag](https://github.com/camilamercado/code-for-sport/blob/master/src/images/example/diagram.png)
+
+Shout out to http://www.sporting-heroes.net/ 
+for being a veritable treasure trove of stock imagery!
